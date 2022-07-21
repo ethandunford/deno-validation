@@ -20,13 +20,11 @@ A general purpose validation library for Deno.
 
 [TODO]
 
-## Deployment
-
-[TODO]
-
 ## Testing
 
-[TODO]
+```
+deno test tests/validation.ts
+```
 
 ## License
 
