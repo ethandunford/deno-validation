@@ -7,4 +7,4 @@
 // # -- Date:    22/07/2022
 // # --
 // # -- ---------------------------------------------------------------------------
-export { isEmpty } from "./validation.ts";
+export * as validation from "./validation.ts";
