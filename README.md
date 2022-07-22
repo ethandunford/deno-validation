@@ -24,9 +24,17 @@ This is the list of current validators
 | isName     | checks to see if name is valid                       | Layhey        |
 | isEmail    | checks to see if email is valid                      | test@test.com |
 
-## Running locally
+## Usage
 
-[TODO]
+```
+import { isName } from "https://raw.githubusercontent.com/ethandunford/deno-validation/main/src/validation.ts";
+
+// true
+console.log(isName("Layhey"))
+
+// false
+console.log(isName(String(1212)))
+```
 
 ## Testing
 
