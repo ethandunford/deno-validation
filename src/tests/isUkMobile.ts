@@ -1,16 +1,5 @@
-import { isEmpty, isUkMobile } from "../mods.ts";
+import { isUkMobile } from "../validation.ts";
 import { assertEquals } from "https://deno.land/std@0.149.0/testing/asserts.ts";
-
-Deno.test("isEmpty", () => {
-  assertEquals(isEmpty(""), true);
-  assertEquals(isEmpty("   "), true);
-  assertEquals(isEmpty(null), true);
-  assertEquals(isEmpty(undefined), true);
-  assertEquals(isEmpty(true), false);
-  assertEquals(isEmpty(false), false);
-  assertEquals(isEmpty("Hello World!"), false);
-  assertEquals(isEmpty(0), false);
-});
 
 Deno.test("isUkMobile - Phones since January 2017 (071x)", () => {
   assertEquals(isUkMobile("07100900023"), true);
@@ -55,3 +44,6 @@ Deno.test("isUkMobile - should not be longer then 11 digits", () => {
   assertEquals(isUkMobile("071009000237"), false);
 });
 
+Deno.test("isUkMobile - +44 (0) 7513 438167", () => {
+  assertEquals(isUkMobile("+44 (0) 7513 438167"), false);
+});
