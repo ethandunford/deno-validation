@@ -1,6 +1,10 @@
 import { isUkPhone } from "../validation.ts";
 import { assertEquals } from "https://deno.land/std@0.149.0/testing/asserts.ts";
 
+Deno.test("isUkPhone  -> 01603661068", () => {
+  assertEquals(isUkPhone("01603661068"), true);
+});
+
 Deno.test("isUkPhone  -> +447222555555", () => {
   assertEquals(isUkPhone("+447222555555"), true);
 });
