@@ -12,6 +12,15 @@
 
 A general purpose validation library for Deno.
 
+## Validators
+
+This is the list of current validators
+
+| validator    | description                                          | example      |
+|--------------|------------------------------------------------------|--------------|
+| isEmpty      | check is a given object is empty                     | ""           |
+| isUkMobile   | only valid UK mobile numbers _(exludes Isle of Man)_ | 07100900023  |
+
 ## Running locally
 
 [TODO]
