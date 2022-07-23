@@ -21,7 +21,8 @@ This is the list of current validators
 | isEmpty    | check is a given object is empty                     | ""            |
 | isUkMobile | only valid UK mobile numbers _(exludes Isle of Man)_ | 07100900023   |
 | isUkPhone  | only valid UK phone numbers                          | 01603661068   |
-| isName     | checks to see if name is valid                       | Layhey        |
+| isName      | checks to see if name is valid                       | Layhey        |
+| isLetterAndSpace | checks to see if a string contains letters with spaces | Jim Layhey        |
 | isEmail    | checks to see if email is valid                      | test@test.com |
 
 ## Usage
