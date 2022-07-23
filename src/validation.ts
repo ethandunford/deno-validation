@@ -57,3 +57,8 @@ const ukMobileRegex: RegExp = /^07[1,3,4,5,7,8,9]\d{8}$/;
 export const isUkMobile = (str: string): boolean => {
   return ukMobileRegex.test(str);
 };
+
+const letterAndSpaceRegex: RegExp = /^\b(?!.*?\s{2})[A-Za-z ]{1,50}\b$/
+export const isLetterAndSpace = (str: string): boolean => {
+  return letterAndSpaceRegex.test(str)
+}
