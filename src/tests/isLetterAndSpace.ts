@@ -18,6 +18,17 @@ Deno.test("isLetterAndSpace ->  $%^$%^ ", () => {
 });
 
 Deno.test("isLetterAndSpace ->  \" \" ", () => {
-    assertEquals(isLetterAndSpace(" "), false);
-  });
-  
+    assertEquals(isLetterAndSpace(" "), true);
+});
+
+Deno.test("isLetterAndSpace ->  Jim", () => {
+  assertEquals(isLetterAndSpace("Jim"), true);
+});
+
+Deno.test("isLetterAndSpace ->  \" Jim", () => {
+  assertEquals(isLetterAndSpace(" Jim"), true);
+});
+
+Deno.test("isLetterAndSpace ->  \"Jim ", () => {
+  assertEquals(isLetterAndSpace(" Jim"), true);
+});

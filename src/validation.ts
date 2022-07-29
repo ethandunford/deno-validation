@@ -58,7 +58,7 @@ export const isUkMobile = (str: string): boolean => {
   return ukMobileRegex.test(str);
 };
 
-const letterAndSpaceRegex: RegExp = /^\b(?!.*?\s{2})[A-Za-z ]{1,50}\b$/
+const letterAndSpaceRegex: RegExp = /^([a-zA-Z\s])|(?=[a-zA-Z\s])$/
 export const isLetterAndSpace = (str: string): boolean => {
   return letterAndSpaceRegex.test(str)
 }
