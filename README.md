@@ -16,14 +16,28 @@ A general purpose validation library for Deno.
 
 This is the list of current validators
 
-| validator  | description                                          | example       |
-| ---------- | ---------------------------------------------------- | ------------- |
-| isEmpty    | check is a given object is empty                     | ""            |
-| isUkMobile | only valid UK mobile numbers _(exludes Isle of Man)_ | 07100900023   |
-| isUkPhone  | only valid UK phone numbers                          | 01603661068   |
-| isName      | checks to see if name is valid                       | Layhey        |
-| isLetterAndSpace | checks to see if a string contains letters with spaces | Jim Layhey        |
-| isEmail    | checks to see if email is valid                      | test@test.com |
+| validator             | description                                                                                    | example               |
+| --------------------- | ---------------------------------------------------------------------------------------------- | --------------------- |
+| isEmpty               | checks that a string is empty                                                                  | ""                    |
+| isTitle               | checks to against Mr, Ms, Mrs, Miss, Dr, Rev, Other                                            | Dr                    |
+| isName                | checks to see if name is valid                                                                 | Layhey                |
+| isEmail               | checks to see if email is valid                                                                | test@test.com         |
+| isMaritalStatus       | checks if string is a valid martial status single, married, civil partnered, divorced, widowed | single                |
+| isUkMobile            | only valid UK mobile numbers _(exludes Isle of Man)_                                           | 07100900023           |
+| isUkPhone             | only valid UK phone numbers                                                                    | 01603661068           |
+| isUkNationalInsurance | only valid UK national insurance numbers                                                       | SP939393H             |
+| isUkPostCode          | only valid UK postcodes                                                                        | NR12PD                |
+| isLetterAndSpace      | checks to see if a string contains letters and spaces                                          | Jim Layhey            |
+| isLetterAndSpaceAndNo | checks to see if a string contains letters, spaces and numbers                                 | Randy Layhey 12       |
+| isNumberAndSpace      | checks to see if a string contains numbers and spaces                                          | 1 2 3                 |
+| isLength              | checks if string is between two values                                                         | foo, 1, 10            |
+| isBetween             | checks if number is between two values                                                         | 4, 0, 10              |
+| isBetween             | checks if number is between two values                                                         | 4, 0, 10              |
+| isGreaterThan         | checks if number is greater than                                                               | 10, 4                 |
+| isLessThan            | checks if number is less than                                                                  | 4, 10                 |
+| isYesOrNo             | checks that a string is yes or no                                                              | Yes                   |
+| isValidJSON           | checks that a string is valid json                                                             | { "example": "pass" } |
+| isValidIp             | checks that a string is a valid IP address                                                     | 127.0.0.1}            |
 
 ## Usage
 
@@ -49,7 +63,7 @@ Apache License 2.0
 
 # Version
 
-0.0.2
+0.0.9
 
 ## Contributing
 
