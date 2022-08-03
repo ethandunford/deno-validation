@@ -7,7 +7,6 @@ Deno.test("isValidJson - jsonExamplePass", () => {
   assertEquals(isValidJson(jsonExamplePass), true);
 });
 
-
 Deno.test("isValidJson - null", () => {
   assertEquals(isValidJson("null"), true);
 });
