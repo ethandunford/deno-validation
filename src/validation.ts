@@ -212,7 +212,7 @@ export const isMaritalStatus = (str: string): boolean => {
 export const isValidJson = (str: string): boolean => {
   try {
     if (str === "") return false;
-    JSON.parse(str) !== null 
+    JSON.parse(str) !== null;
     return true;
   } catch (error) {
     return false;
@@ -220,11 +220,23 @@ export const isValidJson = (str: string): boolean => {
 };
 
 /**
- * Checks if string is a valid IP address
+ * Checks if string is a valid IP V4 address
  * @param {string} str
  * @returns {boolean}
  */
-const isIpRegEx = /^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])$/
-export const isValidIp = (str: string): boolean => {
-  return isIpRegEx.test(str)
-}
+const isIpV4RegEx =
+  /^(\b25[0-5]|\b2[0-4][0-9]|\b[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/gm;
+export const isIpV4 = (str: string): boolean => {
+  return isIpV4RegEx.test(str);
+};
+
+/**
+ * Checks if string is a valid IP V6 address
+ * @param {string} str
+ * @returns {boolean}
+ */
+const isIpV6RegEx =
+  /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/;
+export const isIpV6 = (str: string): boolean => {
+  return isIpV6RegEx.test(str);
+};
