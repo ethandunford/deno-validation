@@ -53,8 +53,8 @@ export const isFloat = (str: string): boolean => {
  */
 
 const nameRegex = /^[a-zA-Z]{2,30}/;
-export const isName = (str: string): boolean => {
-  return nameRegex.test(str);
+export const isName = (str: string, max = 30): boolean => {
+  return nameRegex.test(str) && isBetween(str.length, 2, max);
 };
 
 /**
