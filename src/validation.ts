@@ -111,9 +111,9 @@ export const isLetterAndSpace = (str: string): boolean => {
  * @returns {boolean}
  */
 
-const isLettersAndSpaceAndNoRegex = /^[a-z A-Z0-9]+$/;
-export const isLettersAndSpaceAndNo = (str: string): boolean => {
-  return isLettersAndSpaceAndNoRegex.test(str);
+const isLetterAndSpaceAndNumberRegex = /^[a-z A-Z0-9]+$/;
+export const isLetterAndSpaceAndNumber = (str: string): boolean => {
+  return isLetterAndSpaceAndNumberRegex.test(str);
 };
 
 /**
