@@ -42,6 +42,10 @@ export const isEmpty = (str: unknown): boolean => {
     str === undefined);
 };
 
+const floatRegex = /^\-?[0-9]+(e[0-9]+)?(\.[0-9]+)?$/;
+export const isFloat = (str: string): boolean => {
+  return floatRegex.test(str);
+};
 /**
  * Checks if string is a valid name.
  * @param {string} str
@@ -273,6 +277,11 @@ export const isIpV6 = (str: string): boolean => {
   return isIpV6RegEx.test(str);
 };
 
+/**
+ * Checks if string is a valid URL
+ * @param {string} str
+ * @returns {boolean}
+ */
 const isUrlRegEx = /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/;
 export const isUrl = (str: string): boolean => {
   return isUrlRegEx.test(str);
