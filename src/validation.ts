@@ -273,6 +273,11 @@ export const isIpV6 = (str: string): boolean => {
   return isIpV6RegEx.test(str);
 };
 
+/**
+ * Checks if string is a valid URL
+ * @param {string} str
+ * @returns {boolean}
+ */
 const isUrlRegEx = /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/;
 export const isUrl = (str: string): boolean => {
   return isUrlRegEx.test(str);
