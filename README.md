@@ -69,7 +69,7 @@ Apache License 2.0
 
 # Version
 
-0.0.9
+1.0
 
 ## Contributing
 
