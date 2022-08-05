@@ -18,6 +18,9 @@ This is the list of current validators
 
 | validator             | description                                                                                    | example                                 |
 | --------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------- |
+| isAlphanumeric        | checks that a string only contains alphanumeric characters                                     | hello                                   |
+| isNumeric             | checks that a string only contains numeric characters                                          | 123                                     |
+| isSpecialCharacters   | checks that a string only contains special characters                                          | 1/()£$%^"                               |
 | isEmpty               | checks that a string is empty                                                                  | ""                                      |
 | isTitle               | checks to against Mr, Ms, Mrs, Miss, Dr, Rev, Other                                            | Dr                                      |
 | isName                | checks to see if name is valid                                                                 | Layhey                                  |
@@ -39,6 +42,7 @@ This is the list of current validators
 | isValidJSON           | checks that a string is valid json                                                             | { "example": "pass" }                   |
 | isIpV4                | checks that a string is a valid IP V4 address                                                  | 127.0.0.1                               |
 | isIpV6                | checks that a string is a valid IP V6 address                                                  | 2001:0db8:85a3:0000:0000:8a2e:0370:7334 |
+| isUrl                 | checks that a string is a valid URL                                                            | https://deno.land/                      |
 
 ## Usage
 

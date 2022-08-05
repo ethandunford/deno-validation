@@ -5,34 +5,22 @@ Deno.test("isIpV4 - 127.0.0.1", () => {
   assertEquals(isIpV4("127.0.0.1"), true);
 });
 
+Deno.test("isIpV4 - 31.124.210.157", () => {
+  assertEquals(isIpV4("31.124.210.157"), true);
+});
+
 Deno.test("isIpV4 - 192.168.0.1", () => {
   assertEquals(isIpV4("192.168.0.1"), true);
 });
 
-Deno.test("isIpV4 - 255.255.255.0", () => {
-  assertEquals(isIpV4("255.255.255.0"), true);
-});
-
-Deno.test("isIpV4 - 255.255.255.255", () => {
-  assertEquals(isIpV4("255.255.255.255"), false);
-});
-
 Deno.test("isIpV4 - 0.0.0.0", () => {
-  assertEquals(isIpV4("0.0.0.0"), false);
+  assertEquals(isIpV4("0.0.0.0"), true);
 });
 
-Deno.test("isIpV4 - 1200.5.4.3", () => {
-  assertEquals(isIpV4("1200.5.4.3"), false);
+Deno.test("isIpV4 - 2001:0db8:85a3:0000:0000:8a2e:0370:7334", () => {
+  assertEquals(isIpV4("2001:0db8:85a3:0000:0000:8a2e:0370:7334"), false);
 });
 
-Deno.test("isIpV4 - 1200.5.4.3", () => {
-  assertEquals(isIpV4("1200.5.4.3"), false);
-});
-
-Deno.test("isIpV4 - abc.def.ghi.jkl", () => {
-  assertEquals(isIpV4("abc.def.ghi.jkl"), false);
-});
-
-Deno.test("isIpV4 - 255.foo.bar.1", () => {
-  assertEquals(isIpV4("255.foo.bar.1"), false);
+Deno.test("isIpV4 - FE80:0000:0000:0000:0202:B3FF:FE1E:8329", () => {
+  assertEquals(isIpV4("FE80:0000:0000:0000:0202:B3FF:FE1E:8329"), false);
 });
