@@ -1,4 +1,37 @@
 /**
+ * Checks if string is alphanumeric.
+ * @param {string} str
+ * @returns {boolean}
+ */
+
+const alphanumericRegex = /^[a-zA-z]*$/gmi;
+export const isAlphanumeric = (str: string): boolean => {
+  return alphanumericRegex.test(str);
+};
+
+/**
+ * Checks if string is numeric.
+ * @param {string} str
+ * @returns {boolean}
+ */
+
+const numericRegex = /^[0-9]$/;
+export const isNumeric = (str: string): boolean => {
+  return numericRegex.test(str);
+};
+
+/**
+ * Checks if string is only special characters.
+ * @param {string} str
+ * @returns {boolean}
+ */
+
+const specialCharactersRegex = /[^\w\s]/;
+export const isSpecialCharacters = (str: string): boolean => {
+  return specialCharactersRegex.test(str);
+};
+
+/**
  * Checks if value is not empty.
  * @param {str} any
  * @returns {boolean}
@@ -224,8 +257,7 @@ export const isValidJson = (str: string): boolean => {
  * @param {string} str
  * @returns {boolean}
  */
-const isIpV4RegEx =
-  /^(\b25[0-5]|\b2[0-4][0-9]|\b[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/gm;
+const isIpV4RegEx = /^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)(\.(?!$)|$)){4}$/;
 export const isIpV4 = (str: string): boolean => {
   return isIpV4RegEx.test(str);
 };
@@ -239,4 +271,9 @@ const isIpV6RegEx =
   /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/;
 export const isIpV6 = (str: string): boolean => {
   return isIpV6RegEx.test(str);
+};
+
+const isUrlRegEx = /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/;
+export const isUrl = (str: string): boolean => {
+  return isUrlRegEx.test(str);
 };
