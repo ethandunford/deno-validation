@@ -42,6 +42,10 @@ export const isEmpty = (str: unknown): boolean => {
     str === undefined);
 };
 
+const floatRegex = /^\-?[0-9]+(e[0-9]+)?(\.[0-9]+)?$/;
+export const isFloat = (str: string): boolean => {
+  return floatRegex.test(str);
+};
 /**
  * Checks if string is a valid name.
  * @param {string} str

@@ -33,6 +33,7 @@ This is the list of current validators
 | isLetterAndSpace      | checks to see if a string contains letters and spaces                                          | Jim Layhey                              |
 | isLetterAndSpaceAndNo | checks to see if a string contains letters, spaces and numbers                                 | Randy Layhey 12                         |
 | isNumberAndSpace      | checks to see if a string contains numbers and spaces                                          | 1 2 3                                   |
+| isFloat               | checks to see if a string is a valid float                                                     | 1.5                                     |
 | isLength              | checks if string is between two values                                                         | foo, 1, 10                              |
 | isBetween             | checks if number is between two values                                                         | 4, 0, 10                                |
 | isBetween             | checks if number is between two values                                                         | 4, 0, 10                                |
