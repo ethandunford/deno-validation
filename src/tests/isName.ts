@@ -5,6 +5,10 @@ Deno.test("isName - Layhey", () => {
   assertEquals(isName("Layhey"), true);
 });
 
+Deno.test("isName - Layhey", () => {
+  assertEquals(isName("Layhey", 2), false);
+});
+
 Deno.test("isName - Randy", () => {
   assertEquals(isName("Randy"), true);
 });
