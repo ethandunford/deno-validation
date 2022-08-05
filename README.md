@@ -36,7 +36,6 @@ This is the list of current validators
 | isFloat               | checks to see if a string is a valid float                                                     | 1.5                                     |
 | isLength              | checks if string is between two values                                                         | foo, 1, 10                              |
 | isBetween             | checks if number is between two values                                                         | 4, 0, 10                                |
-| isBetween             | checks if number is between two values                                                         | 4, 0, 10                                |
 | isGreaterThan         | checks if number is greater than                                                               | 10, 4                                   |
 | isLessThan            | checks if number is less than                                                                  | 4, 10                                   |
 | isYesOrNo             | checks that a string is yes or no                                                              | Yes                                     |
