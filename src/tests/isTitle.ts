@@ -5,7 +5,7 @@ Deno.test("isTitle - Mr", () => {
   assertEquals(isTitle("Mr"), true);
 });
 
-Deno.test("isTitle -  Ms", () => {
+Deno.test("isTitle - Ms", () => {
   assertEquals(isTitle("Ms"), true);
 });
 
