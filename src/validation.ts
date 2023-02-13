@@ -251,7 +251,7 @@ export const isValidJson = (str: string): boolean => {
     if (str === "") return false;
     JSON.parse(str) !== null;
     return true;
-  } catch (error) {
+  } catch {
     return false;
   }
 };
