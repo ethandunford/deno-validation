@@ -286,3 +286,12 @@ const isUrlRegEx = /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/;
 export const isUrl = (str: string): boolean => {
   return isUrlRegEx.test(str);
 };
+
+export const isDate = (str: string) => {
+  return Date.parse(str) > 0
+}
+
+const isDateDDMMYYYYRegEx = /[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}/;
+export const isDateDDMMYYYY = (str: string): boolean => {
+  return isDateDDMMYYYYRegEx.test(str);
+}
