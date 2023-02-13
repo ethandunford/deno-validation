@@ -9,6 +9,7 @@
 # Validation
 
 [![language:language](https://img.shields.io/badge/language-deno-black)]()
+[![language:Github Actions](https://img.shields.io/badge/language-passing-green)]()
 
 A general purpose validation library for Deno.
 
@@ -70,7 +71,7 @@ Apache License 2.0
 
 # Version
 
-1.0
+2.0
 
 ## Contributing
 

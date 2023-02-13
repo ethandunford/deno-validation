@@ -16,4 +16,3 @@ Deno.test("isDate - 2023-22-13", () => {
 Deno.test("isDate - 02-13-2023", () => {
   assertEquals(isDate("2023-22-13"), false);
 });
-
