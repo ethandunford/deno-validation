@@ -55,7 +55,7 @@ import { isName } from "https://raw.githubusercontent.com/ethandunford/deno-vali
 // true
 console.log(isName("Layhey"))
 
-// false
+// false 
 console.log(isName(String(1212)))
 ```
 
